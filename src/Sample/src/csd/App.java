@@ -1,39 +1,29 @@
-/*----------------------------------------------------------------------------------------------------------------------
-	scope (faaliyet alanı): Bir ismin derleyici tarafından görülebildiği kod aralığı
-----------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------------------------------------------------------------------------------------
-	Yerel değişkenlerin faaliyet alanı bildirildikleri yerden bildirildikleri bloğun sonuna kadar her yerdir
+	Bir değişkene bildirimi noktasında atanan değere ilkdeğer verme (initilization) denir.
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        Sample.foo();
+        csd.Sample.foo();
     }
 }
 
 class Sample {
     public static void foo()
     {
-        int a;
+        int a = 45; //initialization (ilk değer verme)
 
 
-        a = 10;
+        a = 34; //atama
 
-        {
-            System.out.println(a);
-        }
-    }
 
-    public static void bar()
-    {
-        int a;
+        a = a * 2;
 
-        a = 34;
 
         System.out.println(a);
     }
+    //...
 }
-
