@@ -1,21 +1,18 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	Aşağıdaki add metodu klavyeden istediği iki tane sayının toplam değerini geri döndürmektedir
+	Geri dönüş değeri olmayan metotlar
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        int total = Sample.add();
-
-        System.out.println(total);
+        Sample.add();
     }
 }
 
 
 class Sample {
-    //henüz parametre öğrenmedik, kalıbı kullanalım, result gine.
-    public static int add()
+    public static void add()
     {
         java.util.Scanner kb = new java.util.Scanner(System.in);
 
@@ -27,6 +24,6 @@ class Sample {
 
         int result = val1 + val2;
 
-        return result;
+        System.out.println(result);
     }
 }
