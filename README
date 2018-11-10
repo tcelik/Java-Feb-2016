@@ -1,0 +1,10 @@
+---
+DİZİN YAPISI
+---
+
+Java-Feb-2016 (ana dizin)
+  doc (dizin, dökümanları saklamak amacıyla)
+  hw  (dizin, ev ödevleri)
+  src (dizin, kodlar burada birikiyor)
+    Sample (IntelliJ Idea ile src dizininde oluşturulmuş bir örnek bir proje)
+
