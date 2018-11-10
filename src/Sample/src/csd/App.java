@@ -1,62 +1,81 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	Sınıf Çalışması: Klavyeden iki tane int türden sayı isteyen ve bu sayıların toplamını, farkını  ve çarpımını
-	ekrana yazdıran programı yazınız
-----------------------------------------------------------------------------------------------------------------------*/package csd;
-class App {
-
-    public static void main(String [] args)
-    {
-        java.util.Scanner kb = new java.util.Scanner(System.in);
-
-        System.out.println("val1?");
-        int val1 = Integer.parseInt(kb.nextLine());
-
-        System.out.println("val2?");
-        int val2 = Integer.parseInt(kb.nextLine());
-
-        System.out.printf("%d + %d = %d%n", val1, val2, val1 + val2);
-        System.out.printf("%d - %d = %d%n", val1, val2, val1 - val2);
-        System.out.printf("%d * %d = %d%n", val1, val2, val1 * val2);
-        System.out.printf("%d / %d = %d%n", val1, val2, val1 / val2);
-
-        kb.close();
-    }
-}
-
-
-/*----------------------------------------------------------------------------------------------------------------------
-	Sınıf Çalışması: Klavyeden iki tane int türden sayı isteyen ve bu sayıların toplamını, farkını  ve çarpımını
-	ekrana yazdıran programı yazınız
+	Bir metodun onu çağıran metoda bittiği zaman ilettiği değere geri dönüş değeri denir
 ----------------------------------------------------------------------------------------------------------------------*/
+package csd;
 
 class App1 {
     public static void main(String [] args)
     {
-        java.util.Scanner kb = new java.util.Scanner(System.in);
-
-        System.out.println("Birinci sayıyı giriniz");
-        int val1 = Integer.parseInt(kb.nextLine());
-
-        System.out.println("İkinci sayıyı giriniz");
-        int val2 = Integer.parseInt(kb.nextLine());
-
-        //result mantığı ta buradan başlıyor.
-
-        int result = val1 + val2;
-
-        System.out.println(result);
-
-        result = val1 * val2;
-
-        System.out.println(result);
-
-        result = val1 - val2;
-
-        System.out.println(result);
+        int a = 10;
+        int b = a * Sample1.foo();
 
 
-        kb.close();
     }
 }
 
 
+class Sample1 {
+    public static int foo()
+    {
+        return 10;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+	Bir metodun geri dönüş değeri varsa akışın her noktasında bir değer döndürüyor olması gerekir
+----------------------------------------------------------------------------------------------------------------------*/
+
+
+class App2 {
+    public static void main(String [] args)
+    {
+        int a = 10;
+        int b = a * Sample2.foo();
+
+        System.out.println(b);
+
+    }
+}
+
+
+class Sample2 {
+    public static int foo()
+    {
+        int a = 10;
+
+        //...
+
+        return a * 2;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+	Bir metodun geri dönüş değeri varsa akışın her noktasında bir değer döndürüyor olması gerekir
+----------------------------------------------------------------------------------------------------------------------*/
+
+
+class App3 {
+    public static void main(String [] args)
+    {
+        int a = 10;
+        int b = a * Sample3.foo();
+
+        System.out.println(b);
+    }
+}
+
+
+class Sample3 {
+    public static int foo() //error
+    {
+        int a = 10;
+
+        if (a > 0)
+            return 20;
+
+        //ya akış buraya gelirse ne dönücek diye düşünüyor a tamam 0 dan büyük onunla ilgilenmiyor.
+
+
+
+    } //missing return statement hatası
+}
