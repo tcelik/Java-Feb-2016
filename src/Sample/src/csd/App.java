@@ -1,11 +1,34 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	Değişken bildirimi (declaration):
-	<tür> <isim>;
+	Java da açılan kapanan küme parantezleri arasında kalan bölgeye blok denir
 ----------------------------------------------------------------------------------------------------------------------*/
+package csd;
 
+class App {
+    public static void main(String [] args)
+    {
+        { 	//Blok
+
+        }
+
+        {
+            {
+                //...
+            }
+        }
+    }
+}
 /*----------------------------------------------------------------------------------------------------------------------
-	Java' da 3(üç) yerde değişken bildirimi yapılabilir:
-	1. Yerel değişkenler (Local variables)
-	2. Metotların parametre değişkenleri
-	3. Referans türlerinin veri elemanları
+	Bir blok içerisinde bildirilen değişkenlere yerel değişkenler (local variables) denir
 ----------------------------------------------------------------------------------------------------------------------*/
+package csd;
+
+class App {
+    public static void main(String [] args)
+    {
+        int a;
+
+        //...
+
+        a = 10;
+    }
+}
