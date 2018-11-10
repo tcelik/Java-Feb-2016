@@ -1,12 +1,5 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	Klavyeden int türden bir değer isteme kalıbı
-
-
-	metotlara nasıl ulaşıyorduk
-    paketismi.sınıfismi.metotismi
-
-    sınıflara
-    paketismi.sınıfismi ile ulaşacağız.
+	Klavyeden Long, Double türden bir değer isteme kalıbı
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
@@ -16,13 +9,11 @@ class App {
         java.util.Scanner kb = new java.util.Scanner(System.in);
 
         System.out.println("Bir sayı giriniz");
-        int val = Integer.parseInt(kb.nextLine());
+        long val = Long.parseLong(kb.nextLine());
 
         System.out.println(val * val);
 
         kb.close();
-
-
     }
 }
 
@@ -31,12 +22,22 @@ class Sample {
     public static void foo()
     {
         java.util.Scanner kb = new java.util.Scanner(System.in);
-
-        System.out.println("Sayı?");
-
-        //kb.nextLine() enter bekleyecek. tıklanınca girilen sayıyı dönecek.
-        int val = Integer.parseInt(kb.nextLine());
+        System.out.println("sayi?");
+        double val = Double.parseDouble(kb.nextLine());
         System.out.println(val * val);
         kb.close();
     }
+
+}
+
+class Mample {
+    public static void foo()
+    {
+        java.util.Scanner kb = new java.util.Scanner(System.in);
+        System.out.println("sayi?");
+        long val = Long.parseLong(kb.nextLine());
+        System.out.println(val * val);
+        kb.close();
+    }
+
 }
