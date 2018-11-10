@@ -1,29 +1,30 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	Geri dönüş değeri olmayan metotlar
+	Geri dönüş değeri olmayan metotlarda return tek başına metodu sonlandırmak için kullanılabilir.
+	Bu bir zorunluluk değildir
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        Sample.add();
+        Sample.foo();
     }
 }
 
 
 class Sample {
-    public static void add()
+    public static void foo()
     {
         java.util.Scanner kb = new java.util.Scanner(System.in);
 
-        System.out.println("Birinci sayıyı giriniz");
-        int val1 = Integer.parseInt(kb.nextLine());
+        System.out.println("Bir sayı giriniz");
+        int val = Integer.parseInt(kb.nextLine());
 
-        System.out.println("İkinci sayıyı giriniz");
-        int val2 = Integer.parseInt(kb.nextLine());
+        if (val < 0) {
+            System.out.println("Geçersiz değer");
+            return; //Metot sonlanır
+        }
 
-        int result = val1 + val2;
-
-        System.out.println(result);
+        System.out.println(val);
     }
 }
