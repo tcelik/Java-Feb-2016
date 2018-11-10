@@ -1,9 +1,21 @@
 
 /*----------------------------------------------------------------------------------------------------------------------
-	Paket bildiriminin genel biçimi:
+	Sınıf bildiriminin genel biçimi:
 
-	package <isim>;
-	package csd;
+	[erişim belirleyici] class <sınıf ismi> {
+	    //...
+	}
 
-	Paketlerin içerise sınıflar koyacağız.
+	Burada [] konmasada olur anlamında <sen içini doldur>
+
+
 ----------------------------------------------------------------------------------------------------------------------*/
+package csd;
+
+class Test {
+    //...
+}
+
+class Date {
+    //...
+}
