@@ -5,7 +5,7 @@
 
     [paket ismi].[sınıf ismi].<metot ismi>([argümanlar])
 
-    Metotları paket isminden başlarak çağırıyoruz aslında.  
+    Metotları paket isminden başlarak çağırıyoruz aslında.
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
@@ -14,6 +14,10 @@ public class App {
     public static void main(String[] args)
     {
         System.out.println("Merhaba Java");
+
+        //Aşağıda yazılan foo'yu çağırmak istiyorum neydi genel biçim
+        csd.Sample.foo();
+        csd.Sample.bar();
 
     }
 }
