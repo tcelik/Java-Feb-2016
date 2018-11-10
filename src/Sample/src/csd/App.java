@@ -22,18 +22,9 @@ class App {
         System.out.println("İkinci sayıyı giriniz");
         int b = Integer.parseInt(kb.nextLine());
 
-        int result = Operation.add(a, b);
-
-        System.out.printf("%d + %d = %d%n", a, b, result);
-
-        result = Operation.mul(a, b);
-
-        System.out.printf("%d * %d = %d%n", a, b, result);
-
-        result = Operation.sub(a, b);
-
-        System.out.printf("%d - %d = %d%n", a, b, result);
-
+        System.out.printf("%d + %d = %d%n", a, b, Operation.add(a, b));
+        System.out.printf("%d * %d = %d%n", a, b, Operation.mul(a, b));
+        System.out.printf("%d - %d = %d%n", a, b, Operation.sub(a, b));
 
         kb.close();
     }
@@ -56,5 +47,3 @@ class Operation {
         return a - b;
     }
 }
-
-
