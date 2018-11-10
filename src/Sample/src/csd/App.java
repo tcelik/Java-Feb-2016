@@ -37,6 +37,6 @@ class App {
 	2. Atomlar istenildiği kadar bitişik yazılabilir. Ancak anahtar sözcükler ve değişken atomlar bitişik
 	yazılamaz
 ----------------------------------------------------------------------------------------------------------------------*/
-//package csd;classApp{public static void main(String[]args){System.out.println("Merhaba Java");}} //error
+//package csd;classApp{public static void main(String[]args){System.out.println("Merhaba Java");}} //error olur
 
 

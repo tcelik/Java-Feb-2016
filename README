@@ -1,0 +1,25 @@
+---
+  Dizin Yapısı
+---
+
+Java-Feb-2016 (ana dizin)
+  doc (dizin, dökümanları saklamak amacıyla)
+  hw  (dizin, ev ödevleri)
+  src (dizin, kodlar burada birikiyor)
+    Sample (IntelliJ Idea ile src dizininde oluşturulmuş bir örnek bir proje)
+    
+    
+---
+  Commit'e Bakarken
+---
+
+-> Sample/src java'nın default paketidir.
+
+-> Biz burada src altında csd adlı bir paket açtık. 
+
+-> Bu paketin(csd) içinde App sınıfı main methodu içeren bir sınıf. Dolasıyla uygulamamız App.main() olarak başlayacaktır.
+
+-> Siz App.java adlı kaynak dosyayı incelemeniz yeterli.
+
+
+
