@@ -1,11 +1,6 @@
 /*----------------------------------------------------------------------------------------------------------------------
-    Sınıf bildirdik.
-    Metot bildirdik
-    Metodlarımızı nasıl çağırıyoruz.
-
-    [paket ismi].[sınıf ismi].<metot ismi>([argümanlar])
-
-    Metotları paket isminden başlarak çağırıyoruz aslında.
+   Çağıran metodun(foo), ait olduğu sınıf(Sample) ile çağrılan(bar) aynı sınıfta ise çağırma sırasında paket ismş
+   yazılmayabilir size kalmış. Hatta sınıf ismi bile yazmasan olur aynı sınıftlar.
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
@@ -13,11 +8,6 @@ package csd;
 public class App {
     public static void main(String[] args)
     {
-        System.out.println("Merhaba Java");
-
-        //Aşağıda yazılan foo'yu çağırmak istiyorum neydi genel biçim
-        csd.Sample.foo();
-        csd.Sample.bar();
 
     }
 }
@@ -26,10 +16,15 @@ public class App {
 class Sample {
 
 
-    public static void foo()
+    public static void foo() //metot bildirimi
     {
 
         System.out.println("foo");
+
+        //burada aşağıdaki bar çağıralım neydi sentax paketismi.sınıf ismi...
+        csd.Sample.bar();
+
+        bar(); //diyerek de çağırabilirim is equal csd.Sample.bar()
     }
 
 
