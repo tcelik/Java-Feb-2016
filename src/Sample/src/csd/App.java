@@ -12,25 +12,21 @@ public class App {
     }
 }
 
-
 class Sample {
-
-
-    public static void foo() //metot bildirimi
+    public static void foo()
     {
+        System.out.println("sample.foo");
 
-        System.out.println("foo");
-
-        //burada aşağıdaki bar çağıralım neydi sentax paketismi.sınıf ismi...
-        csd.Sample.bar();
-
-        bar(); //diyerek de çağırabilirim is equal csd.Sample.bar()
+        csd.Mample.bar();
+        //is equivalent, paket ismi gerek olmadı çağıran foo() ile çağrılan bar() aynı paketteler ama farklı sınıftalar.
+        Mample.bar();
     }
+}
 
 
+class Mample {
     public static void bar()
     {
-
-        System.out.println("bar");
+        System.out.println("Mample.bar");
     }
 }
