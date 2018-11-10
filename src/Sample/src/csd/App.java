@@ -1,13 +1,60 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	printf metodunda %c char türü için kullanılır
+	Sınıf Çalışması: Operation isimli sınıf içerisinde paremetresi ile aldığı iki tane int türden sayıyı toplayan
+	add, çarpan mul ve çıkartan sub isimli metotları yazınız. Bu metotları klavyeden istene iki sayı için
+	çağırarak formatlı biçimde ekrana yazdıran programı yazınız.
+	Örnek girişler 10 ve 20 ise çıktı:
+
+	10 + 20 = 30
+	10 * 20 = 200
+	10 - 20 = -10
+
+	biçiminde olacaktır
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        char ch = 65; //ch = 'A'; demek ile aynı, int char türüne atanabilir implicit olarak kendi yapar, char ch = (char) 65
+        java.util.Scanner kb = new java.util.Scanner(System.in);
+        System.out.println("Birinci sayıyı giriniz");
+        int a = Integer.parseInt(kb.nextLine());
 
-        System.out.printf("ch=%c%n", ch); //%c karakterini ver demek
+        System.out.println("İkinci sayıyı giriniz");
+        int b = Integer.parseInt(kb.nextLine());
+
+        int result = Operation.add(a, b);
+
+        System.out.printf("%d + %d = %d%n", a, b, result);
+
+        result = Operation.mul(a, b);
+
+        System.out.printf("%d * %d = %d%n", a, b, result);
+
+        result = Operation.sub(a, b);
+
+        System.out.printf("%d - %d = %d%n", a, b, result);
+
+
+        kb.close();
     }
 }
+
+
+class Operation {
+    public static int add(int a, int b)
+    {
+        return a + b;
+    }
+
+    public static int mul(int a, int b)
+    {
+        return a * b;
+    }
+
+    public static int sub(int a, int b)
+    {
+        return a - b;
+    }
+}
+
+
