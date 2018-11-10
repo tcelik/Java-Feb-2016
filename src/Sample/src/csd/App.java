@@ -1,81 +1,32 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	Bir metodun onu çağıran metoda bittiği zaman ilettiği değere geri dönüş değeri denir
+	Aşağıdaki add metodu klavyeden istediği iki tane sayının toplam değerini geri döndürmektedir
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
-class App1 {
+class App {
     public static void main(String [] args)
     {
-        int a = 10;
-        int b = a * Sample1.foo();
+        int total = Sample.add();
 
-
+        System.out.println(total);
     }
 }
 
 
-class Sample1 {
-    public static int foo()
+class Sample {
+    //henüz parametre öğrenmedik, kalıbı kullanalım, result gine.
+    public static int add()
     {
-        return 10;
+        java.util.Scanner kb = new java.util.Scanner(System.in);
+
+        System.out.println("Birinci sayıyı giriniz");
+        int val1 = Integer.parseInt(kb.nextLine());
+
+        System.out.println("İkinci sayıyı giriniz");
+        int val2 = Integer.parseInt(kb.nextLine());
+
+        int result = val1 + val2;
+
+        return result;
     }
-}
-
-/*----------------------------------------------------------------------------------------------------------------------
-	Bir metodun geri dönüş değeri varsa akışın her noktasında bir değer döndürüyor olması gerekir
-----------------------------------------------------------------------------------------------------------------------*/
-
-
-class App2 {
-    public static void main(String [] args)
-    {
-        int a = 10;
-        int b = a * Sample2.foo();
-
-        System.out.println(b);
-
-    }
-}
-
-
-class Sample2 {
-    public static int foo()
-    {
-        int a = 10;
-
-        //...
-
-        return a * 2;
-    }
-}
-
-/*----------------------------------------------------------------------------------------------------------------------
-	Bir metodun geri dönüş değeri varsa akışın her noktasında bir değer döndürüyor olması gerekir
-----------------------------------------------------------------------------------------------------------------------*/
-
-
-class App3 {
-    public static void main(String [] args)
-    {
-        int a = 10;
-        int b = a * Sample3.foo();
-
-        System.out.println(b);
-    }
-}
-
-
-class Sample3 {
-    public static int foo() //error
-    {
-        int a = 10;
-
-        if (a > 0)
-            return 20;
-
-        //ya akış buraya gelirse ne dönücek diye düşünüyor a tamam 0 dan büyük onunla ilgilenmiyor.
-
-
-
-    } //missing return statement hatası
 }
