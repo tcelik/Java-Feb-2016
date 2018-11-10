@@ -1,39 +1,16 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	Bir metoda argüman olarak bir  metodun geri dönüş değeri geçilebilir
+	printf metodu ile ekrana formatlı yazdırma yapılabilir. Formatlı yazdırma için yer tutucu (placeholder)
+	veya format karakteri denilen özel karakterler % karakteri ile kullanılır.
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        int x = 4;
-
-        //önce hesaplanır.
-        Sample.foo(Sample.bar(Sample.tar(x * x)));
-    }
-}
-
-
-class Sample {
-    //ekrana bas
-    public static void foo(int a)
-    {
-        System.out.println(a);
-    }
-
-    //ver bana bir sayı, kullanıcdan aldığım değerle çarpim dönim.
-    public static int bar(int a)
-    {
         java.util.Scanner kb = new java.util.Scanner(System.in);
-        System.out.println("Bir sayı giriniz");
-        int val = Integer.parseInt(kb.nextLine());
+        System.out.println("Hava bugün kaç derece");
+        int degree = Integer.parseInt(kb.nextLine());
 
-        return val * a;
-    }
-
-    //ver bana bi sayı 2 ile çarpim
-    public static int tar(int a)
-    {
-        return a * 2;
+        System.out.printf("Bugün hava %d derece", degree);
     }
 }
