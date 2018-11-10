@@ -1,30 +1,28 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	Geri dönüş değeri olmayan metotlarda return tek başına metodu sonlandırmak için kullanılabilir.
-	Bu bir zorunluluk değildir
+	Metotların return deyimindeki ifade geçici değişkene yapılan bir atama işlemidir
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        Sample.foo();
+        int a = Sample.foo();
     }
 }
 
 
 class Sample {
-    public static void foo()
+    public static int foo()
     {
         java.util.Scanner kb = new java.util.Scanner(System.in);
 
         System.out.println("Bir sayı giriniz");
         int val = Integer.parseInt(kb.nextLine());
 
-        if (val < 0) {
-            System.out.println("Geçersiz değer");
-            return; //Metot sonlanır
-        }
-
-        System.out.println(val);
+        //---bu kısmı derleyici yapıyor.
+        //int temp = 0; //geçici değişken
+        //temp = val * val;
+        //return temp;
+        return val * val; //return deyimindeki ifade atama işlemidir. registera atıyor aslında
     }
 }
