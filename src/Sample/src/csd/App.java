@@ -7,18 +7,29 @@ package csd;
 class App {
     public static void main(String [] args)
     {
-        int x = 10;
-        double y = 3.4;
-
-        Sample.foo(x + 2,  y * 3); // int a = x + 2	double b = y * 3
+        Sample.foo(Sample.bar());
     }
 }
 
 
 class Sample {
-    public static void foo(int a, double b)
+
+    //argümanı ekrana basıyor.
+    public static void foo(int a)
     {
         System.out.println(a);
-        System.out.println(b);
+    }
+
+    //kullanıcıdan sayı alıp karesinin alıyormuş
+    public static int bar()
+    {
+        java.util.Scanner kb = new java.util.Scanner(System.in);
+        System.out.println("val1?");
+        int val1 = Integer.parseInt(kb.nextLine());
+
+        int result = val1 * val1;
+
+        kb.close();
+        return result;
     }
 }
