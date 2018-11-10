@@ -1,29 +1,37 @@
 /*----------------------------------------------------------------------------------------------------------------------
-    Bir java dosyasında birden fazla sınıf bildirimi yapılabilir.
-    Burada 3 tane sınıf bildirimi yapılmıştır (App, Test, Sample, sınıf bildirimin genel biçimini hatırlayın.)
+    Metot bildiriminin genel biçimi:
 
-    Buradaki ayrıntı şu:
-        Bunlardan sadece biri [erişim belirleyici] olarak public olabilir. Örneğin App public ise diğerleri public olamaz
-        [erişim belirleyici] olarak public bildirilmişşe, bu sınıfın ismi ile dosyanın ismi aynı olmalı.
+    [erişim belirleyici] [static] <geri dönüş türü> <isim> ([parametreler])
+    {
+        //...
+    }
 
-        Aksi durumda sınıflardan hiçbiri public erişim belirleyici ile bildirilmemişse. Dosyanın ismi sınıf isimlerinden
-        bambaşka olabilir.
-
+    Erişim belirleyici şunlar olabilir: public, private, protected, no modifier(hiç bir şey yazmama durumu)
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
-
-class App {
+//public erişim belirleyici
+public class App {
     public static void main(String[] args)
     {
         System.out.println("Merhaba Java");
     }
 }
 
-class Test {
-    //...
-}
-
+//no-modifier erişim belirleci
 class Sample {
-    //...
+
+    //public bir metot bildirimi
+    public static void foo()
+    {
+        //...
+        System.out.println("foo");
+    }
+
+
+    public static void bar()
+    {
+        //...
+        System.out.println("bar");
+    }
 }
