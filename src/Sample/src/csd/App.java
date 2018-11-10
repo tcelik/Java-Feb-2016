@@ -1,128 +1,103 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	Java da aynı faaliyet alanı içerisinde aynı isimde birden fazla değişken bildirimi yapılamaz
+	03.04.2018
+	Değişken isimleri rakam karakterleri ile başlayamaz
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        Sample.foo();
+        int 1number; //error
     }
-}
-
-class Sample {
-    public static void foo()
-    {
-        int a;
-
-
-        //...
-        double a;
-
-
-
-    }
-    //...
 }
 
 /*----------------------------------------------------------------------------------------------------------------------
-	Java da kapsayan blokta bildirilmiş bir değişken ismi kapsanan bloklarda yeni bir değişken
-	bildirimi olarak kullanılamaz
+	Değişken isimleri başlayabileceği herhangi bir karakter ile başlayıp istediği kadar rakam karakteri
+	içerebilir
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        Sample.foo();
+        int a1234;
+
+        a1234 = 23;
+
+        System.out.println(a1234);
     }
-}
-
-class Sample {
-    public static void foo()
-    {
-        int a;
-
-
-        //...
-        {
-            double a; //error
-
-            //...
-        }
-
-
-
-    }
-    //...
 }
 
 /*----------------------------------------------------------------------------------------------------------------------
-	Ayrık bloklar içerisinde aynı isimde yerel değişkenler olabilir
+	Değişken isimleri alttire (underscore) karakterini içerebilir hatta başlatılabilir
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        Sample.foo();
+        int _1234;
+
+        _1234 = 23;
+
+        System.out.println(_1234);
     }
-}
-
-class Sample {
-    public static void foo()
-    {
-
-        {
-            int a;
-
-        }
-
-
-        //...
-        {
-            int a;
-
-            //...
-        }
-
-
-
-    }
-    //...
 }
 
 /*----------------------------------------------------------------------------------------------------------------------
-	Aşağıdaki bildirimler geçerlidir. İç bloğun içerisindeki değişkenin faaliyet alanı bittikten sonra
-	aynı isimde diğer değişken bildirilmiştir
+	Değişken isimleri boşluk karakteri (whitespace) içeremez
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        Sample.foo();
+        int number of students; //error
+
+
     }
 }
 
-class Sample {
-    public static void foo()
+/*----------------------------------------------------------------------------------------------------------------------
+	Alttire nin tek başına değişken ismi olması Java 9 ile birlikte geçersizdir
+----------------------------------------------------------------------------------------------------------------------*/
+package csd;
+
+class App {
+    public static void main(String [] args)
     {
+        int _ = 10; //error: Since Java 9
 
-        //...
-        {
-            int a = 34;
-
-            //...
-
-            System.out.println(a);
-        }
-
-
-        int a = 67;
-
-        System.out.println(a);
-
+        System.out.println(_);
     }
-    //...
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+	$ karakteri değişken isimlendirmede kullanılabilir. Fakat programcılar
+	tarafından tercih edilmez
+----------------------------------------------------------------------------------------------------------------------*/
+package csd;
+
+class App {
+    public static void main(String [] args)
+    {
+        int numberOf$s = 10;
+
+        System.out.println(numberOf$s);
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+	Değişken isimleri UNICODE karakterler içerebilir. Yani Türkçe karakterler
+	değişken isimlendirmede kullanılabilmektedir
+----------------------------------------------------------------------------------------------------------------------*/
+package csd;
+
+class App {
+    public static void main(String [] args)
+    {
+        int sayı = 10;
+
+        System.out.println(sayı);
+    }
 }
