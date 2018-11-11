@@ -1,39 +1,16 @@
 
-
 /*----------------------------------------------------------------------------------------------------------------------
-	Bitsel and ve bitsel or operatörleri boolean türü ile kullanıldıklarında kısa devre özelliği olmayan
-	and ve or operatörleridir
+	Mantıksal not operatörü flag değişkenlerin içeriğinin değişiminde kullanılabilir
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        boolean result = Sample.bar() & Sample.foo() | Sample.tar();
+        boolean flag = false;
 
-        System.out.printf("result=%b%n", result);
-    }
-}
+        flag = !flag;
 
-class Sample {
-    public static boolean foo()
-    {
-        System.out.println("foo");
-
-        return true;
-    }
-
-    public static boolean bar()
-    {
-        System.out.println("bar");
-
-        return false;
-    }
-
-    public static boolean tar()
-    {
-        System.out.println("tar");
-
-        return true;
+        System.out.println(flag);
     }
 }
