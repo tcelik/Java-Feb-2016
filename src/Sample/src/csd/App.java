@@ -1,67 +1,29 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	++ ve -- operatörlerinin karışık kullanımları
+	Mantıksal operatörlerin kısa devre (short circuit) davranışı
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        int a = 10;
-        int b = a++ + --a;
+        boolean result = Sample.foo() || Sample.bar();
 
-        System.out.printf("a=%d%n", a); // a=10
-        System.out.printf("b=%d%n", b); // b=20
+        System.out.printf("result=%b%n", result);
     }
 }
 
-/*----------------------------------------------------------------------------------------------------------------------
-	++ ve -- operatörlerinin karışık kullanımları
-----------------------------------------------------------------------------------------------------------------------*/
-package csd;
-
-class App {
-    public static void main(String [] args)
+class Sample {
+    public static boolean foo()
     {
-        int a = 10;
-        int b = a++ + --a + a++;
+        System.out.println("foo");
 
-        System.out.printf("a=%d%n", a); // a=11
-        System.out.printf("b=%d%n", b); // b=30
+        return true;
     }
-}
 
-/*----------------------------------------------------------------------------------------------------------------------
-	++ ve -- operatörlerinin karışık kullanımları
-----------------------------------------------------------------------------------------------------------------------*/
-package csd;
-
-class App {
-    public static void main(String [] args)
+    public static boolean bar()
     {
-        int a = 10;
-        int b = a++ + --a + ++a;
+        System.out.println("bar");
 
-        System.out.printf("a=%d%n", a); // a=11
-        System.out.printf("b=%d%n", b); // b=31
-    }
-}
-
-/*----------------------------------------------------------------------------------------------------------------------
-	Aşağıdaki örnekte derleyici anlamlı en uzun atomu alarak işlem yaptığı için ayırma
-	a++ + b
-	biçimindedir
-----------------------------------------------------------------------------------------------------------------------*/
-package csd;
-
-class App {
-    public static void main(String [] args)
-    {
-        int a = 10;
-        int b = 20;
-        int c = a+++b; //a++ + b
-
-        System.out.printf("a=%d%n", a); // a=11
-        System.out.printf("b=%d%n", b); // b=20
-        System.out.printf("c=%d%n", c); // b=30
+        return false;
     }
 }
