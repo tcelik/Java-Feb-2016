@@ -1,5 +1,6 @@
+
 /*----------------------------------------------------------------------------------------------------------------------
-	++ operatörü operandının  değerini 1(bir) artırır
+	++ operatörünün prefix kullanımının ürettiği değer (işleme giren değer) artırılmış değerdir
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
@@ -8,8 +9,9 @@ class App {
     {
         int a = 10;
 
-        ++a; // a = a + 1;
+        int b = ++a;
 
+        System.out.printf("b=%d%n", b);
         System.out.printf("a=%d%n", a);
     }
 }
