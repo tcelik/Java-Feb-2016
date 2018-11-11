@@ -1,5 +1,8 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	 Math sınıfının yuvarlama yapan metotları
+	 Sınıf Çalışması: Util sınıfı içerisinde bir üçgenin üç kenarını parametre olarak alıp alanını döndüren
+	 getTriangleArea ve çevresini döndüren getTriangleCircumference metotlarını yazınız ve metotları
+	 klavyeden girilen değerler ile çağırarak test ediniz.
+	 Not: Kenarların üçgen koşullarını sağlayıp sağlamadığı test edilmeyecektir
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
@@ -7,14 +10,29 @@ class App {
     public static void main(String [] args)
     {
         java.util.Scanner kb = new java.util.Scanner(System.in);
-        System.out.println("Bir sayı giriniz");
-        double val = Double.parseDouble(kb.nextLine());
+        System.out.println("a? b? c?");
+        double a = Double.parseDouble(kb.next());
+        double b = Double.parseDouble(kb.next());
+        double c = Double.parseDouble(kb.next());
 
-        System.out.printf("round(%.2f)=%d%n", val, Math.round(val)); //10.5 ve büyükler : 11 e, 10.5'dan küçükler 10'a
-        System.out.printf("rint(%.2f)=%f%n", val, Math.rint(val));//10.5 : 10.00 diğerli raund
-        System.out.printf("ceil(%.2f)=%f%n", val, Math.ceil(val)); //yukarıya  10.9 : 11'a
-        System.out.printf("floor(%.2f)=%f%n", val, Math.floor(val)); //aşağıda 10.9 : 10'a
+        System.out.println(Util.getTriangleArea(a, b, c));
 
         kb.close();
+    }
+}
+
+class Util {
+    public static double getTriangleArea(double a, double b, double c)
+    {
+        //...
+        double u = getTriangleCircumference(a, b, c) / 2;
+
+        return Math.sqrt(u * (u - a) * (u - b) * (u - c));
+    }
+
+    public static double getTriangleCircumference(double a, double b, double c)
+    {
+        //...
+        return a + b + c;
     }
 }
