@@ -1,17 +1,18 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	printf metodunda gerçek sayılar ekrana yazdırılırken % ve f arasına konulan nokta ve bu noktadan sonra
-	yazılacak sayı ekrana basılırken noktadan sonraki basamak sayısını temsil eder. Sayı yuvarlanarak
-	ekrana basılır. Yuvarlama bilimsel yuvarlamadır
-----------------------------------------------------------------------------------------------------------------------*/
-package csd;
-
+	 Math sınıfının abs metotları (absolute method)
+----------------------------------------------------------------------------------------------------------------------*/package csd;
 class App {
     public static void main(String [] args)
     {
-        double val = 3.456234;
+        java.util.Scanner kb = new java.util.Scanner(System.in);
+        System.out.println("val1?");
+        int val1 = Integer.parseInt(kb.nextLine());
 
-        System.out.printf("val=%.3f%n", val);
+        int result = Math.abs(val1);
 
-        System.out.printf("val=%.4f", val);
+        //System.out.printf("|%d| = %d%n", val1, result);
+
+        String fmt = "|%d|=%d%n";
+        System.out.printf(fmt, val1, result);
     }
 }
