@@ -1,14 +1,15 @@
+
+
 /*----------------------------------------------------------------------------------------------------------------------
-        Mantıksal operatörler klasik öncelik kurallarına uymazlar. Aşağıdaki ifadede önce sol taraftaki operand
-        çalıştırılır. Mantıksal operatörler doğru sonuca yani önceliğe uyulursa elde edilecek sonuca
-        en kısa yoldan ulaşırlar
-        ----------------------------------------------------------------------------------------------------------------------*/
-        package csd;
+	Bitsel and ve bitsel or operatörleri boolean türü ile kullanıldıklarında kısa devre özelliği olmayan
+	and ve or operatörleridir
+----------------------------------------------------------------------------------------------------------------------*/
+package csd;
 
 class App {
     public static void main(String [] args)
     {
-        boolean result = Sample.foo() || Sample.bar() && Sample.tar();
+        boolean result = Sample.bar() & Sample.foo() | Sample.tar();
 
         System.out.printf("result=%b%n", result);
     }
