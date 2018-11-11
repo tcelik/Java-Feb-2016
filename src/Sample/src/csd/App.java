@@ -1,23 +1,18 @@
 /*----------------------------------------------------------------------------------------------------------------------
-	Aritmetik dört işlem operatörleri
+	İşaret - operatörü
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        java.util.Scanner kb = new java.util.Scanner(System.in);
+        int x  = 3, y = 4;
 
-        System.out.println("Birinci sayıyı giriniz");
-        int a = Integer.parseInt(kb.nextLine());
+        int a = x - - - - - - y;
 
-        System.out.println("İkinci sayıyı giriniz");
-        int b = Integer.parseInt(kb.nextLine());
+        System.out.printf("a=%d%n", a);
 
-        System.out.printf("%d + %d = %d%n", a, b, a + b);
-        System.out.printf("%d - %d = %d%n", a, b, a - b);
-        System.out.printf("%d * %d = %d%n", a, b, a * b);
-        System.out.printf("%d / %d = %d%n", a, b, a / b);
-        System.out.printf("%d %% %d = %d%n", a, b, a % b);
+
     }
 }
+
