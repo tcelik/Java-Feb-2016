@@ -1,13 +1,23 @@
-
 /*----------------------------------------------------------------------------------------------------------------------
-	İki tırnak içerisinde ters bölüden sonra escape sequence karakter gelmelidir.
-	Aşağıdaki örnekte \\192.168.2.101\testdb.db yazısı ekrana çıkmaktadır
+	Aritmetik dört işlem operatörleri
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
 class App {
     public static void main(String [] args)
     {
-        System.out.println("\\\\192.168.2.101\\testdb.db");
+        java.util.Scanner kb = new java.util.Scanner(System.in);
+
+        System.out.println("Birinci sayıyı giriniz");
+        int a = Integer.parseInt(kb.nextLine());
+
+        System.out.println("İkinci sayıyı giriniz");
+        int b = Integer.parseInt(kb.nextLine());
+
+        System.out.printf("%d + %d = %d%n", a, b, a + b);
+        System.out.printf("%d - %d = %d%n", a, b, a - b);
+        System.out.printf("%d * %d = %d%n", a, b, a * b);
+        System.out.printf("%d / %d = %d%n", a, b, a / b);
+        System.out.printf("%d %% %d = %d%n", a, b, a % b);
     }
 }
