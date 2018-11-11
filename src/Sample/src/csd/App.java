@@ -1,6 +1,6 @@
 
 /*----------------------------------------------------------------------------------------------------------------------
-	++ operatörünün prefix kullanımının ürettiği değer (işleme giren değer) artırılmış değerdir
+	++ operatörünün postfix kullanımının ürettiği değer (işleme giren değer) artırılMAmış değerdir
 ----------------------------------------------------------------------------------------------------------------------*/
 package csd;
 
@@ -9,7 +9,7 @@ class App {
     {
         int a = 10;
 
-        int b = ++a;
+        int b = a++;
 
         System.out.printf("b=%d%n", b);
         System.out.printf("a=%d%n", a);
